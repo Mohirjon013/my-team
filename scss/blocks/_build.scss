@@ -1,0 +1,90 @@
+
+.build-section {
+    padding: 140px 0;
+    background-color: #012F34;
+    background-image: url(../../images/build-bg.svg);
+    background-repeat: no-repeat;
+    background-size: 100px 244px;
+    background-position: right bottom;
+}
+.build {
+    @include display($items:start, $space:space-between, $gap:0px)
+}
+.build__title-wrapper {
+    max-width: 414px;
+}
+.build__line {
+    width: 50px;
+    height: 4px;
+    display: inline-block;
+    margin-bottom: 54px;
+    background-color: #F67E7E;
+}
+.build__title-wrapper > h2{
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0px, $CLR:$white-color);
+}
+.build__list {
+    max-width: 540px;
+    flex-direction: column;
+    @include display($items:start, $space:start, $gap:32px)
+}
+.buil__item {
+    max-width: 100%;
+    @include display($items:start, $space:start, $gap:23px);
+}
+.build__text-wrapper {
+    max-width: 445px;
+}
+.build__text-wrapper > h3{
+    @include textStyle($FS:18px, $FW:700, $LH:28px, $MB:16px, $CLR:#F67E7E);
+}
+.build__text-wrapper > p{
+    @include textStyle($FS:15px, $FW:700, $LH:25px, $MB:0px, $CLR:#CCD5D6);
+}
+
+// tablet start
+@media only screen and (max-width:800px){
+    .build-section {
+        padding: 100px 0;
+        background-position: right top;
+    }
+    .build {
+        flex-direction: column;
+        @include display($items:start, $space:start, $gap:64px);
+        width: 540px;
+        margin: 0 auto;
+    }
+    .build__title-wrapper {
+        max-width: 445px;   
+    }
+    .build__line {
+        margin-bottom: 32px;
+    }
+    .build__title-wrapper > h2{
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:$white-color);
+    }
+    
+}
+// tablet end
+@media only screen and (max-width:600px){
+    .build-section {
+        padding: 64px 0;
+    }
+    .build {
+        max-width: 327px;
+    }
+    .build__title-wrapper {
+        max-width: 220px;   
+    }
+    .buil__item {
+        flex-direction: column;
+        @include display($items:center, $space:start, $gap:16px);
+        text-align:center;
+    }
+    .build__text-wrapper{
+        max-width: 100%;
+    }
+    .build__text-wrapper > h3{
+        margin-bottom: 8px;
+    }
+}
