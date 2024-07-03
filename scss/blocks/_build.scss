@@ -8,7 +8,7 @@
     background-position: right bottom;
 }
 .build {
-    @include display($items:start, $space:space-between, $gap:0px)
+    @include display($items:start, $space:space-between, $gap:50px)
 }
 .build__title-wrapper {
     max-width: 414px;
@@ -24,12 +24,12 @@
     @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0px, $CLR:$white-color);
 }
 .build__list {
-    max-width: 540px;
+    // max-width: 540px;
     flex-direction: column;
     @include display($items:start, $space:start, $gap:32px)
 }
 .buil__item {
-    max-width: 100%;
+    // max-width: 100%;
     @include display($items:start, $space:start, $gap:23px);
 }
 .build__text-wrapper {
@@ -43,16 +43,15 @@
 }
 
 // tablet start
-@media only screen and (max-width:800px){
+@media only screen and (max-width:845px){
     .build-section {
         padding: 100px 0;
+        padding-left: 58px;
         background-position: right top;
     }
     .build {
         flex-direction: column;
         @include display($items:start, $space:start, $gap:64px);
-        width: 540px;
-        margin: 0 auto;
     }
     .build__title-wrapper {
         max-width: 445px;   
@@ -66,15 +65,15 @@
     
 }
 // tablet end
-@media only screen and (max-width:600px){
+@media only screen and (max-width:530px){
     .build-section {
         padding: 64px 0;
     }
     .build {
-        max-width: 327px;
+        max-width: 100%;
     }
     .build__title-wrapper {
-        max-width: 220px;   
+        width:70%;
     }
     .buil__item {
         flex-direction: column;
@@ -83,6 +82,7 @@
     }
     .build__text-wrapper{
         max-width: 100%;
+        width: 100%;
     }
     .build__text-wrapper > h3{
         margin-bottom: 8px;

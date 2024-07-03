@@ -1,0 +1,41 @@
+
+.get-section {
+    padding: 76px 65px;
+    background-color: #F67E7E;
+    background-image: url(../images/get-bg.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+.get {
+    @include display($items:center, $space:space-between, $gap:0px);
+}
+.get__title {
+    @include textStyle($FS:48px, $FW:700, $LH:48px, $MB:0px, $CLR:#012F34);
+}
+.get__link {
+    @include btnStyle($W:153px, $PY:10px, $BorderColor:#012F34, $BgColor:transparent, $BtnFS:18px, $BtnFW:600, $BtnLH:28px,$BtnMB:0px, $BtnTextColor:#012F34, $HoverBG:#012F34, $HoverColor:$white-color);
+}
+// tablet start
+@media only screen and (max-width:870px){
+    .get-section {
+        padding: 90px 58px ;
+    }
+    .get__title {
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:#012F34);
+    }
+}
+// tablet end
+
+@media only screen and (max-width:670px){
+    .get-section {
+        padding: 105px 0px ;
+    }
+    .get{
+        flex-direction: column;
+        @include display($items:center, $space:start, $gap:24px);
+    }
+    .get__title {
+        text-align: center;
+        @include textStyle($FS:32px, $FW:700, $LH:32px, $MB:0px, $CLR:#012F34);
+    }
+}

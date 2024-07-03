@@ -16,7 +16,7 @@
     color: #79C8C7;
 }
 .reslut__list {
-    @include display($items:start, $space:space-between, $gap:0px);
+    @include display($items:start, $space:space-between, $gap:10px);
 }
 .reslut__item {
     width: 350px;
@@ -42,7 +42,7 @@
 
 
 // tablet start
-@media only screen and (max-width:800px){
+@media only screen and (max-width:860px){
     .result-section {
         padding: 100px 0;
     }

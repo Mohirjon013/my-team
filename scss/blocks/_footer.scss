@@ -1,0 +1,106 @@
+.site-footer {
+    background: #002529;
+    padding: 45px 0;
+}
+.footer__list {
+    @include display($items:center, $space:start, $gap:125px);  
+}
+.footer__img{
+    margin-bottom: 25px;
+}
+.footer__link {
+    display: inline-block;
+}
+.footer__link-wrapper {
+    @include display($items:center, $space:start, $gap:40px);
+}
+.footer__link-wrapper > a{
+    @include textStyle($FS:18px, $FW:600, $LH:28px, $MB:0px, $CLR:$white-color);
+    transition: 0.3s all linear;
+    &:hover{
+        color:#F67E7E;
+    }
+}
+.footer__item:nth-child(2) {
+    width: 445px; 
+}
+.footer__text, .footer__text > a {
+    font-style: normal;
+    @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:#99A8A9);
+}
+.footer__item:nth-child(3) {
+    flex-direction: column;
+    @include display($items:end, $space:left, $gap:51px);
+}
+.footer__icon-item {
+    @include display($items:center, $space:start, $gap:16px);
+}
+.footer__icon-item > a{
+    color: $white-color;
+    transition: 0.3s all linear;
+    &:hover{
+        color: #F67E7E;
+    }
+}
+// tablet start
+
+@media only screen and (max-width:840px){
+    .site-footer {
+        padding: 56px 35px;
+    }
+    .footer__list {
+        max-width: 700px;   
+        @include display($items:center, $space:space-between, $gap:40px);
+        flex-wrap: wrap;
+    }
+    .footer__item:nth-child(2) {
+       max-width: 170px;
+    }
+    .footer__item:nth-child(3) {
+        flex-direction: column;
+        @include display($items:center, $space:center, $gap:51px);
+        margin-left: 30%;
+    }
+    
+}
+
+// mobile start
+
+@media only screen and (max-width:650px){
+    .site-footer {
+        padding: 65px 0;
+    }
+    .footer__list {
+        @include display($items:center, $space:space-between, $gap:24px);
+        flex-direction: column;
+    }
+    .footer__img{
+        max-width: 96px;
+        max-height: 24px;
+    }
+    .footer__link-wrapper > a{
+        @include textStyle($FS:15px, $FW:600, $LH:25px, $MB:0px, $CLR:$white-color);
+    }
+    .footer__item:nth-child(1) {
+        width: 100%;
+        max-width: 110px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footer__link-wrapper {
+        @include display($items:center, $space:space-between, $gap:40px);
+        text-align: center;
+    }
+    .footer__item:nth-child(2) {
+       width: 100%;
+       text-align: center;
+    }
+    .footer__item:nth-child(3) {
+        flex-direction: column;
+        @include display($items:center, $space:center, $gap:16px);
+        max-width: 270px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+}
